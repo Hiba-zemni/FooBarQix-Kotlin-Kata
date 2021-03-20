@@ -38,7 +38,7 @@ class FooBarQixTest {
 
     @Test
     fun shouldReturn12IfNumberIsFrom1to2() {
-        assertEquals(listOf("1", "2"), FooBarQix().transformNumber((1..2).toList()))
+        assertEquals(listOf("1", "2"), FooBarQix().transformNumber(listOf(1, 2)))
     }
 
 
