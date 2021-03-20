@@ -15,4 +15,9 @@ class FooBarQixTest {
         assertEquals("2", FooBarQix().transformNumber(2))
     }
 
+    @Test
+    fun shouldReturnFooIfNumberI32() {
+        assertEquals("Foo", FooBarQix().transformNumber(3))
+    }
+
 }
