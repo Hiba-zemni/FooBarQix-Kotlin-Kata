@@ -33,3 +33,9 @@ class FooBarQix {
     }
 
 }
+
+fun main() {
+    FooBarQix().transformNumber((1..100).toList()).forEach {
+        println(it)
+    }
+}
