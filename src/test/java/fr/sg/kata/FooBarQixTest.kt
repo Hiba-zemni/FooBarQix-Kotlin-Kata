@@ -16,8 +16,13 @@ class FooBarQixTest {
     }
 
     @Test
-    fun shouldReturnFooIfNumberI32() {
+    fun shouldReturnFooIfNumberI3() {
         assertEquals("Foo", FooBarQix().transformNumber(3))
+    }
+
+    @Test
+    fun shouldReturnFooIfNumberI6() {
+        assertEquals("Foo", FooBarQix().transformNumber(6))
     }
 
 }
