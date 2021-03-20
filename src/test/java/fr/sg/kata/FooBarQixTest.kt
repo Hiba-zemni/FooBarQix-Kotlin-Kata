@@ -61,6 +61,32 @@ class FooBarQixTest {
         assertEquals("Qix", FooBarQix().transformNumber(7))
     }
 
+    @Test
+    fun shouldReturnFooBarIfNumberIs51() {
+        assertEquals("FooBar", FooBarQix().transformNumber(51))
+    }
+
+    @Test
+    fun shouldReturnBarFooIfNumberIs53() {
+        assertEquals("BarFoo", FooBarQix().transformNumber(53))
+    }
+
+    @Test
+    fun shouldReturnFooIfNumberIs13() {
+        assertEquals("Foo", FooBarQix().transformNumber(13))
+    }
+
+    @Test
+    fun shouldReturnFooBarBarIfNumberIs15() {
+        assertEquals("FooBarBar", FooBarQix().transformNumber(15))
+    }
+
+    @Test
+    fun shouldReturnFooQixIfNumberIs27() {
+        assertEquals("FooQix", FooBarQix().transformNumber(27))
+    }
+
+
 
 
 }

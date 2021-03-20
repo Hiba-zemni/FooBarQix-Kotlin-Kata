@@ -25,10 +25,11 @@ class FooBarQix {
     }
 
     private fun evaluateDivisibleRules (sb: StringBuilder, number : Int){
-        when {
-            number % 3 == 0 -> sb.append("Foo")
-            number % 5 == 0 -> sb.append("Bar")
-        }
+        if(number % 3 == 0)
+            sb.append("Foo")
+        if(number % 5 == 0)
+            sb.append("Bar")
 
     }
+
 }
