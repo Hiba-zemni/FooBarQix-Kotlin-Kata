@@ -10,11 +10,18 @@ class FooBarQix {
     fun transformNumber(number : Int) : String{
         val sb = StringBuilder()
         evaluateDivisibleRules(sb, number)
-        for (c in number.toString().toCharArray()) {
-            if (c == '3')
-                sb.append("Foo")
-        }
+        evaluateContainsRules(sb, number)
         return if(sb.isEmpty()) number.toString() else sb.toString()
+    }
+
+    private fun evaluateContainsRules(sb: StringBuilder, number: Int) {
+        number.toString().toCharArray().forEach {
+            when(it) {
+                '3' -> sb.append("Foo")
+                '5' -> sb.append("Bar")
+                '7' -> sb.append("Qix")
+            }
+        }
     }
 
     private fun evaluateDivisibleRules (sb: StringBuilder, number : Int){
