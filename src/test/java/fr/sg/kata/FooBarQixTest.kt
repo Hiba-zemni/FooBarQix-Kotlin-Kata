@@ -10,4 +10,9 @@ class FooBarQixTest {
         assertEquals("1", FooBarQix().transformNumber(1))
     }
 
+    @Test
+    fun shouldReturn2IfNumberIs2() {
+        assertEquals("2", FooBarQix().transformNumber(2))
+    }
+
 }
