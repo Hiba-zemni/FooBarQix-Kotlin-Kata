@@ -30,6 +30,11 @@ class FooBarQixTest {
         assertEquals("Bar", FooBarQix().transformNumber(5))
     }
 
+    @Test
+    fun shouldReturnBarIfNumberI10() {
+        assertEquals("Bar", FooBarQix().transformNumber(10))
+    }
+
 
 
 }
