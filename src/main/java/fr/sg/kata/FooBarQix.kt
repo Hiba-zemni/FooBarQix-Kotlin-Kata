@@ -10,6 +10,10 @@ class FooBarQix {
     fun transformNumber(number : Int) : String{
         val sb = StringBuilder()
         evaluateDivisibleRules(sb, number)
+        for (c in number.toString().toCharArray()) {
+            if (c == '3')
+                sb.append("Foo")
+        }
         return if(sb.isEmpty()) number.toString() else sb.toString()
     }
 
