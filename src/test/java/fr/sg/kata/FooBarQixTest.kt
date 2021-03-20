@@ -18,7 +18,7 @@ class FooBarQixTest {
 
     @Test
     fun shouldReturnFooIfNumberI3() {
-        assertEquals("Foo", FooBarQix().transformNumber(3))
+        assertEquals("FooFoo", FooBarQix().transformNumber(3))
     }
 
     @Test
@@ -39,6 +39,21 @@ class FooBarQixTest {
     @Test
     fun shouldReturn12IfNumberIsFrom1to2() {
         assertEquals(listOf("1", "2"), FooBarQix().transformNumber(listOf(1, 2)))
+    }
+
+    @Test
+    fun shouldReturn12FooIfNumberIsFrom1to3() {
+        assertEquals(listOf("1", "2", "Foo"), FooBarQix().transformNumber(listOf(1, 2, 3)))
+    }
+
+    @Test
+    fun shouldReturn12Foo4BarIfNumberIsFrom1to5() {
+        assertEquals(listOf("1", "2", "Foo", "4", "Bar"), FooBarQix().transformNumber(listOf(1, 2, 3, 4, 5)))
+    }
+
+    @Test
+    fun shouldReturn12Foo4BarFoo78FooBarIfNumberIsFrom1to10() {
+        assertEquals(listOf("1", "2", "Foo", "4", "Bar", "Foo", "7", "8", "Foo", "Bar"), FooBarQix().transformNumber((1..10).toList()))
     }
 
 
