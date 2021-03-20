@@ -2,10 +2,17 @@ package fr.sg.kata
 
 class FooBarQix {
 
+    fun transformNumber(numbers : List<Int>): List<String> {
+        val result = ArrayList<String>()
+        for (item in numbers) {
+            transformNumber(item)?.let { result.add(it) }
+        }
+        return result
+    }
 
 
-    fun transformNumber(number1 : Int, number2 : Int):String?{
-       return evaluateDivisibleRules(number1)
+    fun transformNumber(number : Int):String?{
+       return evaluateDivisibleRules(number)
     }
 
     private fun evaluateDivisibleRules (number : Int):String?{
