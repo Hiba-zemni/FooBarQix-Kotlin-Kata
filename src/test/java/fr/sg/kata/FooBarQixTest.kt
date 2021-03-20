@@ -30,4 +30,6 @@ class FooBarQixTest {
         assertEquals("Bar", FooBarQix().transformNumber(5))
     }
 
+
+
 }
